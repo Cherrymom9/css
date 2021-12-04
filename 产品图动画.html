@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item-container {
+            display: flex;
+        }
+
+        .block {
+            display: block;
+        }
+
+        dl,
+        dd,
+        dt {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        a {
+            position: relative;
+            margin: auto;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .red {
+            color: red;
+        }
+
+        dd {
+            line-height: 1.75em;
+            margin-left: 10px;
+            
+        }
+
+        dt img {
+            transition: all 1s ease;
+        }
+
+        a:hover {
+
+            box-shadow:
+                0 0 .5em rgba(0, 0, 0, 0.3),
+                0 0 1em rgba(0, 0, 0, 0.3),
+                0 0 1.5em rgba(0, 0, 0, 0.3);
+        }
+
+        a:hover img {
+            transform: scale(1.1);
+        }
+
+        a:hover dt::after,
+        a:hover dt::before {
+            transform: scale(1);
+        }
+
+        dt::before,
+        dt::after {
+            content: "";
+            position: absolute;
+           
+            width: 340px;
+            height: 340px;
+            z-index: 1;
+            transform: scale(0);
+            transition: all 1s ease;
+        }
+
+        dt::before {
+            top: 30px;
+            left: 20px;
+            border-top: 2px solid skyblue;
+            border-left: 2px solid skyblue;
+            transform-origin: left top;
+        }
+
+        dt::after {
+            bottom: 80px;
+            right: 20px;
+            border-bottom: 2px solid skyblue;
+            border-right: 2px solid skyblue;
+            transform-origin: right bottom;
+         }
+    </style>
+</head>
+
+<body>
+    <div class="item-container">
+        <a class="block" href="#">
+            <dl>
+                <dt>
+                    <img class="block" src="xx103.jpg" alt="">
+                </dt>
+                <dd>香薰套件</dd>
+                <dd class="red">￥299.90</dd>
+            </dl>
+        </a>
+    </div>
+
+</body>
+
+</html>
